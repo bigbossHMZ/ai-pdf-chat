@@ -10,7 +10,7 @@ export default function Home() {
       <MaxWidthWrapper className="mb-12 mt-28 sm:mt-40 flex flex-col items-center justify-center text-center">
         <div className="mx-auto mb-4 flex max-w-fit items-center justify-center space-x-2 overflow-hidden rounded-full border-gray-200 bg-white px-7 py-2 shadow-md backdrop-blur transition-all hover:border-gray-300 hover:bg-white/50">
           <p className="text-sm font-semibold text-gray-700">
-            Ai PDF Chat is now public !
+            Artificial Ink. is now public !
           </p>
         </div>
         <h1 className="max-w-4xl text-5xl font-bold md:text-6xl lg:text-7xl">
@@ -18,7 +18,7 @@ export default function Home() {
           seconds.
         </h1>
         <p className="mt-5 max-w-prose text-zinc-700 sm:text-lg">
-          <span className="text-blue-600">AI PDF Chat</span> allows you to chat
+          <span className="text-blue-600">Artificial Ink.</span> allows you to chat
           with your documents in seconds. Just upload your document and start
           chatting right away.
         </p>
@@ -123,7 +123,7 @@ export default function Home() {
                 Upload your PDF file
               </span>
               <span className="mt-2 text-zinc-700">
-                I could be a pdf course, research paper, crypto whitepaper, etc.
+                It could be a pdf course, research paper, crypto whitepaper, etc.
               </span>
             </div>
           </li>
