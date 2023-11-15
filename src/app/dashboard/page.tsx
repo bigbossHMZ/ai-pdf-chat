@@ -1,3 +1,4 @@
+import { db } from '@/db'
 import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server'
 import { redirect } from 'next/navigation'
 
@@ -7,6 +8,10 @@ const Page = async () => {
     const user = await getUser()
 
     if (!user || !user.id) redirect('/auth-callback?origin=dashboard')
+
+    const dbuser = db.user.findFirst({ where: { id: user.id } })
+
+    if (!dbuser) redirect('/auth-callback?origin=dashboard')
 
     return (
         <div>
