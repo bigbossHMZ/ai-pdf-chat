@@ -45,9 +45,10 @@ export const POST = async (req: NextRequest) => {
 
     const pineconeIndex = pinecone.Index('artificial-ink')
 
+
+    // Here we should use the context of the file to get a specified namespace, but for now we just fetch answers from all the files.
     const vectorStore = await PineconeStore.fromExistingIndex(embeddings, {
-        pineconeIndex,
-        namespace: file.id,
+        pineconeIndex
     })
 
     const results = await vectorStore.similaritySearch(message, 4)
@@ -94,6 +95,7 @@ export const POST = async (req: NextRequest) => {
             },
         ],
     })
+
 
     const stream = OpenAIStream(response, {
         async onCompletion(completion) {
