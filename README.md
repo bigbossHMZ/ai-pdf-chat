@@ -1,4 +1,4 @@
-# Artificial Ink - AI PDF Chat SaaS
+# Artificial Ink - AI PDF Chat SaaS - Undeployed
 
 Portfolio project showcasing a production-style AI application built with the modern Next.js ecosystem.
 
