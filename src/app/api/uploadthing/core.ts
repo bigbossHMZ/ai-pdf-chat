@@ -11,13 +11,15 @@ const f = createUploadthing()
 export const ourFileRouter = {
     pdfUploader: f({ pdf: { maxFileSize: '4MB' } })
         .middleware(async ({ req }) => {
+            
             const { getUser } = getKindeServerSession()
             const user = await getUser()
             if (!user || !user.id) throw new Error('Unauthorized')
-
+            console.log('middleware')
             return { userId: user.id }
         })
         .onUploadComplete(async ({ metadata, file }) => {
+            console.log('onUploadComplete')
             const createdFile = await db.file.create({
                 data: {
                     key: file.key,
